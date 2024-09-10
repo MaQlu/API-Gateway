@@ -1,2 +1,4 @@
 # API-Gateway
-Gateway for spring library project
+Gateway for spring library project.
+Just edit "GatewayConfig.java" and add new services and ports and should work.
+
