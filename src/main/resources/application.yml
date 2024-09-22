@@ -1,16 +1,18 @@
-#idk what is that
-#spring:
-#  application:
-#    name: gateway-service
-#  cloud:
-#    gateway:
-#      routes:
-#        - id: first
-#          predicates:
-#            - Path=/first/
-#          uri: localhost:8001
-#
-#        - id: second
-#          predicates:
-#            - Path=/second/
-#          uri: localhost:8002
+spring:
+  application:
+    name: API-GATEWAY
+  server:
+    port: 8080
+  cloud:
+    gateway:
+      routes:
+        - id: library-service
+          uri: http://localhost:8001
+          predicates:
+            - Path=/library/**
+
+        - id: test-service
+          uri: http://localhost:8002
+          predicates:
+            - Path=/test/**
+
